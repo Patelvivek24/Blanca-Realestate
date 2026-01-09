@@ -1412,11 +1412,23 @@ button {
 
 .ul-banner-slide {
   padding: clamp(250px, 16.29vw, 310px) clamp(15px, 5.25vw, 100px) clamp(180px, 12.61vw, 240px);
-  background: url(../img/banner-slide-1.jpg) no-repeat center center;
-  background-size: cover;
   position: relative;
   z-index: 1;
   padding-top: clamp(130px, 13.03vw, 248px);
+  overflow: hidden;
+}
+
+.ul-banner-slide-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  z-index: -2;
 }
 
 @media screen and (max-width: 1399px) {
@@ -2347,7 +2359,7 @@ button {
 
 .ul-project.ul-featured-property .ul-project-add-to-favorites-btn:hover {
   background-color: var(--ul-primary);
-  color: var(--white);
+  color: var(--ul-primary);
 }
 
 .ul-project.ul-featured-property .ul-project-title {
@@ -4186,6 +4198,7 @@ button {
   align-items: center;
   gap: clamp(15px, 1.5vw, 20px);
   animation: fadeInUp 0.8s ease-out 0.5s both;
+  margin: 0px 6px;
 }
 
 .ul-footer-socials .ul-footer-social-link {
@@ -4354,7 +4367,9 @@ button {
 }
 
 .ul-footer-contact-item i {
-  color: var(--ul-primary);
+  color: transparent;
+  -webkit-text-stroke: 0.9px var(--ul-primary);
+  text-stroke: 0.9px var(--ul-primary);
   font-size: clamp(18px, 1.2vw, 20px);
   flex-shrink: 0;
   margin-top: 2px;
@@ -4372,7 +4387,8 @@ button {
 
 .ul-footer-contact-item:hover i {
   transform: scale(1.2);
-  color: var(--ul-secondary);
+  -webkit-text-stroke: 1.2px var(--ul-primary);
+  text-stroke: 1.2px var(--ul-primary);
 }
 
 .ul-footer-bottom {

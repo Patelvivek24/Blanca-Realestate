@@ -319,8 +319,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     new Swiper(".ul-banner-slider", {
         slidesPerView: 1,
         loop: true,
-        autoplay: true,
+        autoplay: false,
         spaceBetween: 0,
+        speed: 1000,
+        // effect: 'fade',
+        // fadeEffect: {
+        //     crossFade: true
+        // },
         navigation: {
             nextEl: ".ul-banner-slider-nav .next",
             prevEl: ".ul-banner-slider-nav .prev",

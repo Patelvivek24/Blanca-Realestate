@@ -10,11 +10,23 @@
     &-slide {
         // padding: clamp(15px, 5.25vw, 100px);
         padding: clamp(250px, 16.29vw, 310px) clamp(15px, 5.25vw, 100px) clamp(180px, 12.61vw, 240px);
-        background: url(../img/banner-slide-1.jpg) no-repeat center center;
-        background-size: cover;
         position: relative;
         z-index: 1;
         padding-top: clamp(130px, 13.03vw, 248px);
+        overflow: hidden;
+
+        &-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+            z-index: -2;
+        }
 
         @include xl {
             padding: clamp(150px, 16.29vw, 310px) clamp(15px, 5.25vw, 100px) clamp(180px, 12.61vw, 240px);
